@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/*Variabler*/
+/*Farver*/
+/*Knap*/
+/*Underside mixin*/
+/*Artikel mixin*/
+/*Nyhedsbrev*/
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Hind Siliguri";
+  src: url(fonts/HindSiliguri-Bold.ttf);
+}
+@font-face {
+  font-family: "Hind Madurai";
+  src: url(fonts/HindMadurai-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*Skrifttyper*/
+h1 {
+  font-size: 120px;
+  font-family: Montserrat;
+  color: #0A100D;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: Hind Siliguri;
+  color: #0A100D;
+}
+
+h3 {
+  font-size: 26px;
+  font-family: Hind Siliguri;
+}
+
+p {
+  font-family: Hind Madurai;
+  font-size: 18px;
+}
+
+/*Knapper*/
+.btn {
+  color: #FFFAE3;
+  background-color: #7F5539;
+  padding: 15px 50px 15px 50px;
+  border: 1px solid #0A100D;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: Hind Siliguri;
+  font-weight: 900;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn2 {
+  color: #7F5539;
+  background-color: #FFFAE3;
+  padding: 15px 50px 15px 50px;
+  border: 1px solid #0A100D;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: Hind Siliguri;
+  font-weight: 900;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Navigation*/
+header {
+  display: flex;
+  justify-content: space-between; /* Placerer elementerne i hver ende af header'en */
+  align-items: center; /* Centrerer elementerne lodret */
+}
+
+nav ul {
+  list-style: none; /* Fjern punktopstillingen fra navigationen */
+  padding: 0; /* Fjern polstring */
+}
+
+nav li {
+  display: inline; /* Vis navigationselementerne ved siden af hinanden */
+  margin-left: 20px; /* Tilføj lidt afstand mellem hvert element */
+}
+
+.nav li:first-child {
+  margin-left: 0; /* Fjern afstanden til venstre for det første element */
+}
+
+nav a {
+  color: #FCFCFC; /* Ændre farven på tekst til sort (eller en anden farve efter behov) */
+  text-decoration: none; /* Fjern understregning fra linket */
+  font-family: Hind Siliguri;
+  padding: 20px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #7F5539; /* Ændre farven på tekst ved hover */
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/*Body*/
+body {
+  background-color: #B08968;
+}
+
+/*Sektion Forside + Billede*/
+.forsideogbillede {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+}
+
+.forside {
+  padding-right: 5px;
+  padding-left: 5%;
+}
+.forside p {
+  padding-right: 25em;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+.forside img {
+  max-width: 100%; /* Gør billedet responsivt */
+  height: auto; /* Tillader billedets højde at skaleres proportionalt */
+}
+
+/*Sektion Velkommen*/
+.sektion_velkommen {
+  background-color: #FFFAE3;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1%;
+}
+.sektion_velkommen p {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 2%;
+}
+
+.sektion_emner {
+  background-color: #B08968;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.sektion_emner .emne {
+  max-width: 100%; /* Angiv en maksimal bredde på 90% af containeren */
+  margin: 0 auto; /* Centrer elementet vandret */
+  padding: 0;
+}
+.sektion_emner p {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  text-align: center;
+  width: auto;
+}
+
+/*Sektion om os*/
+.sektion_omos {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFAE3;
+}
+.sektion_omos h2 {
+  padding: 40px;
+  padding-bottom: 1%;
+}
+.sektion_omos p {
+  padding: 40px;
+  padding-right: 12%;
+}
+.sektion_omos .btn {
+  margin: 40px;
+}
+
+/*Sektion Nyhedsbrev*/
+.sektion_nyhedsbrev {
+  background-color: #7F5539;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+.sektion_nyhedsbrev h2 {
+  color: #FFFAE3;
+  padding-bottom: 1%;
+}
+.sektion_nyhedsbrev p {
+  color: #FFFAE3;
+  padding-right: 20%;
+  padding-left: 20%;
+}
+.sektion_nyhedsbrev input[type=text], .sektion_nyhedsbrev input[type=email] {
+  background-color: #FFFAE3;
+}
+.sektion_nyhedsbrev form label {
+  font-size: 18px;
+}
+.sektion_nyhedsbrev form label input[type=text],
+.sektion_nyhedsbrev form label input[type=email] {
+  font-size: 18px;
+  font-family: Hind Siliguri;
+}
+.sektion_nyhedsbrev form .btn2 {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/*Træning og ernæring*/
+.underside {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+}
+.underside .underside_overskrift {
+  padding-right: 5px;
+  padding-left: 5%;
+}
+.underside .underside_overskrift h1 {
+  font-size: 72px;
+}
+.underside .underside_overskrift h2 {
+  font-size: 26px;
+}
+.underside .underside_overskrift p {
+  padding-right: 50%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+.container {
+  margin: 20px;
+  padding-bottom: 5%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-01 {
+  background-color: #FFFAE3;
+  color: #0A100D;
+  position: relative;
+  flex: 1;
+  max-width: 526px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba 0, 0, 0, 0.2;
+  text-align: left;
+  padding: 10px;
+}
+.card-01 img {
+  width: 100%;
+  /* height: 100%; Fjernet denne linje */
+  -o-object-fit: cover;
+     object-fit: cover;
+  justify-content: center;
+}
+.card-01 p {
+  width: 100%; /* Tilføjet denne linje */
+  box-sizing: border-box; /* Tilføjet denne linje for at inkludere padding og border i bredden */
+}
+
+/*Artikel i undersider*/
+.artikel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  background-color: #7F5539;
+}
+.artikel img {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  display: block; /* Gør billedet til et blokelement for at sikre korrekt placering */
+  margin-left: 0; /* Centrerer billedet horisontalt */
+  margin-right: 0; /* Centrerer billedet horisontalt */
+}
+.artikel p {
+  padding-left: 18%;
+  padding-right: 18%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.footer-sektion h2 {
+  color: #FCFCFC;
+}
+
+/**********************Responsive Indstillinger************************/
+@media screen and (max-width: 1432px) {
+  .forside h1 {
+    font-size: 92px;
+  }
+  .forside h2 {
+    font-size: 24px;
+  }
+  .forside p {
+    padding-right: 5em;
+    padding-bottom: 8%;
+    padding-top: 5%;
+  }
+  .forside .btn {
+    margin-bottom: 19%;
+  }
+  .sektion_emner .emne {
+    max-width: 70%; /* Fuld bredde på mindre skærme */
+  }
+  .sektion_emner p {
+    width: 90%; /* Just an example value, adjust as needed */
+  }
+}
+@media screen and (max-width: 1332px) {
+  .sektion_emner .emne {
+    width: 60%;
+  }
+  .sektion_emner img {
+    width: 70%;
+    height: auto;
+  }
+  .sektion_omos {
+    padding: 50px;
+  }
+  .sektion_omos .btn2 {
+    padding-bottom: 3%;
+  }
+}
+@media screen and (max-width: 1063px) {
+  .forside h1 {
+    font-size: 68px;
+  }
+  .forside h2 {
+    font-size: 22px;
+  }
+  .forside .btn {
+    margin-bottom: 19%;
+  }
+}
+@media screen and (max-width: 926px) {
+  .forside h1 {
+    font-size: 62px;
+  }
+  .forside p {
+    font-size: 16px;
+  }
+  .forside .btn {
+    margin-bottom: 19%;
+  }
+  .sektion_omos {
+    flex-direction: column;
+  }
+  .sektion_omos img {
+    height: auto;
+  }
+}
+/* Navigation */
+@media screen and (max-width: 870px) {
+  .nav-list {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger-menu .bar {
+    width: 40px;
+    height: 8px;
+    background-color: #0A100D;
+    margin: 5px 0 5px 0px;
+    transition: 0.4s;
+  }
+  /* Ændringer til hamburger-menu ved klik */
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /* Vis navigationselementer, når hamburger-menuen er aktiv */
+  .nav-list.active {
+    display: block;
+  }
+}
+@media screen and (max-width: 870px) {
+  .forsideogbillede {
+    flex-direction: column; /* Omvender rækkefølgen af flex-elementerne på mindre skærme */
+  }
+  .forsideogbillede img {
+    max-width: 90%; /* Reducér bredden af billedet på mindre skærme */
+    padding-left: 40%;
+  }
+  .forside {
+    text-align: left; /* Justér teksten til venstre på mindre skærme */
+  }
+  .forside p {
+    padding: 0;
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  .sektion_emner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .sektion_emner .emne {
+    max-width: 80%;
+  }
+  .sektion_emner img {
+    justify-content: center;
+    padding: 5px;
+  }
+  .sektion_emner p {
+    width: auto;
+    padding-bottom: 20px;
+  }
+  .sektion_omos .btn {
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  .card-01 {
+    flex: 100%;
+    max-width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .underside_overskrift p {
+    padding-right: 0;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  p {
+    padding: 0;
+    -webkit-hyphens: none;
+            hyphens: none;
+  }
+}/*# sourceMappingURL=style.css.map */

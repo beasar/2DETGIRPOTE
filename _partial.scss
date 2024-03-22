@@ -1,0 +1,138 @@
+/*Variabler*/
+$font-size: 18px;
+$input-width: 300px;
+$basepadding:18%;
+
+
+
+/*Farver*/
+
+$primary: #B08968;
+$secondary: #7F5539;
+$tertiary: #0A100D;
+$accent-color: #FFFAE3;
+$contrast-color: #FCFCFC;
+
+
+// Mixins for skriftstørrelse og input bredde
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+@mixin input-width($width) {
+    width: $width;
+}
+
+
+/*Knap*/
+
+@mixin btn{
+    color: $accent-color;
+    background-color: $secondary;
+    padding: 15px 50px 15px 50px;
+    border: 1px solid $tertiary;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: Hind Siliguri;
+    font-weight: 900;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+@mixin btn2{
+    color: $secondary;
+    background-color: $accent-color;
+    padding: 15px 50px 15px 50px;
+    border: 1px solid $tertiary;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: Hind Siliguri;
+    font-weight: 900;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*Underside mixin*/
+
+@mixin underside{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+
+    .underside_overskrift{
+        padding-right: 5px;
+        padding-left: 5%;
+
+        h1{
+            font-size: 72px;
+        }
+    
+        h2{
+            font-size: 26px;
+        }
+        p{
+            padding-right: 50%;
+            padding-bottom: 3%;
+            padding-top: 2%;
+            hyphens: auto;}
+       
+    }
+}
+
+/*Artikel mixin*/
+
+@mixin artikel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: left;
+    padding: 30px;
+    background-color: partial.$secondary;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        display: block; /* Gør billedet til et blokelement for at sikre korrekt placering */
+        margin-left: 0; /* Centrerer billedet horisontalt */
+        margin-right: 0; /* Centrerer billedet horisontalt */
+    
+    }
+
+    p{
+       padding-left: 18%;
+       padding-right: 18%;
+       hyphens: auto;
+    }}
+
+
+
+/*Nyhedsbrev*/
+@mixin sektion_nyhedsbrev{
+    background-color: $secondary;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3%;
+    padding-top: 2%;
+
+    h2{
+        color: $accent-color;
+        padding-bottom: 1%;
+    }
+
+    p{
+        color:$accent-color;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+    input[type="text"],input[type="email"]{
+        background-color: $accent-color;
+    
+    }
+    
+}
+
+

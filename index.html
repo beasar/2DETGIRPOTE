@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Det gir pote</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo" width="120px" height="65px"></a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="traening.html">Træning & Adfærd</a></li>
+            <li><a href="ernaering.html">Ernæring & Sundhed</a></li>
+            <li><a href="pleje.html">Pleje & Hygiejne</a></li>
+        </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <!--Forside-->
+<main>
+<div class="forsideogbillede">
+   <div class="forside">
+        <h1>Det gir' pote</h1>
+        <h2>Dit kompas til hundevelfærd og kærlighed</h2>
+        <p>Vi er dedikerede til at levere værdifulde ressourcer, praktiske tips og støtte til hundeelskere overalt. Uanset om du leder efter træningsråd, ernæringsvejledning eller plejetips, er du kommet til det rette sted. </p>
+        <a class="btn" href="#om-os">Læs mere</a>
+    </div>
+        <img src="img/Dog-waving.png">
+    </div>
+        <!--Velkommen til klubben sektion-->
+    <div class="sektion_velkommen">
+        <h2>Velkommen til klubben</h2>
+        <p>Uanset om du er en erfaren hundeejer eller lige har adopteret din første hvalp, er dette stedet, hvor du kan finde inspiration, råd og støtte til at gøre din hundeejerskabserfaring så glædelig og berigende som muligt. 
+            <br><br><b>Læs mere om vores forskellige emner her:</b></p>
+    </div>
+            <!--Forskellige emner-->
+    <div class="sektion_emner">
+            <div class="emne">
+            <img src="img/traening.png" alt="en hund der følger sine ejers skridt lydigt">
+            <h3>Træning & Adfærd</h3>
+            <p>Lær hvordan du opbygger tillid og forståelse med din hund gennem positiv forstærkning og konsekvent træning.</p>
+        </div>
+        <div class="emne">
+            <img src="img/sundhed.png" alt="fokus på en kvinde og en saint berneder hund glade i baggrunden af noget efterårs skov">
+            <h3>Ernæring & Sundhed</h3>
+            <p>Opdag nøglen til en sund og afbalanceret kost, der styrker din hunds velvære og livskvalitet.</p>
+        </div>
+        <div class="emne">
+            <img src="img/pleje.png" alt="en brun labrador der bliver vasket i badekar">
+            <h3>Pleje & Hygiejne</h3>
+            <p>Få eksperttips til at holde din hund ren og velplejet med korrekt pelspleje, øre- og øjenrengøring samt tandhygiejne.</p>
+        </div>
+     </div>
+     <!--Kort om os-->
+    <div class="sektion_omos" id="om-os">
+        <img src="img/kortomsos.png" alt="en mand og en dame der aer deres tre hunde foran sig i snor udenfor">
+    <div class="omos_tekst">
+        <h2>Kort om os</h2>
+        <p>Vi er et dedikeret team af hundeentusiaster og erfarne hundeejere, der brænder for at dele vores viden og kærlighed til vores firbenede venner.<br><br>
+            Vores mission er at skabe et online fællesskab, hvor hundeelskere kan finde værdifulde ressourcer, nyttige tips og støtte til at skabe et lykkeligt og sundt liv for deres pelsede familiemedlemmer.Vi stræber efter at være det go-to-sted for alt, hvad der vedrører hunde, fra praktiske træningstips og ernæringsråd til rådgivning om sundhed og velvære.
+<br><br>
+            Uanset om du er en ny hundeejer, der søger vejledning, eller en erfaren hundeejer, der ønsker at fordybe dig i vores fællesskab, er du velkommen hos os. Sammen kan vi skabe et endnu stærkere bånd med vores hunde og berige vores liv med den ubetingede kærlighed, de bringer </p>
+            <a class="btn" href="#kontakt">Kontakt os</a></div>
+    </div>
+    <!--Nyhedsbrev-->
+    <div class="sektion_nyhedsbrev">
+        <h2>Tilmeld dig vores nyhedsbrev!</h2>
+        <p>Seneste hundetips, eksklusive tilbud og spændende nyheder direkte i din indbakke. Tilmeld dig vores nyhedsbrev og bliv en del af vores hundeelsker-fællesskab! Vores nyhedsbrev leverer regelmæssigt værdifuld indsigt og inspiration til at forbedre livet med din pelsede bedste ven.</p>
+        <form action="/submit.php" method="post">
+            <label for="navn"></label><br>
+            <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" style="width: 300px; height: 50px;"><br>
+            <label for="email"></label><br>
+            <input type="email" id="email" name="email" placeholder="Indtast din email" style="width: 300px; height: 50px;"><br><br>
+            <a class="btn2" href="#" onclick="document.getElementById('form-submit').click(); return false;">Tilmeld</a>
+            <input type="submit" id="form-submit" style="display: none;">
+        </form>
+        
+    </div>
+</main>
+    <!--Footer-->
+    <footer>
+        <div class="footer-sektion" id="kontakt">
+        <h2>Kontakt os</h2>
+        <p>+45 12 23 45 66</p>
+        <p>detgirpote@email.com</p>
+        </div>
+        <div class="footer-sektion">
+        <h2>Følg os</h2>
+        <p>Her og der</p>
+        <p>og her der</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>

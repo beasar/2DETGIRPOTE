@@ -1,0 +1,505 @@
+@use 'partial';
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url(fonts/HindSiliguri-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Hind Madurai';
+    src: url(fonts/HindMadurai-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/*Skrifttyper*/
+h1{
+    font-size: 120px;
+    font-family: Montserrat;
+    color: partial.$tertiary;
+    font-weight: 900;
+}
+h2{
+    font-size: 36px;
+    font-family: Hind Siliguri;
+    color: partial.$tertiary;
+}
+
+h3{
+    font-size: 26px;
+    font-family: Hind Siliguri;
+}
+
+p{
+    font-family: Hind Madurai;
+    font-size: partial.$font-size;
+}
+
+/*Knapper*/
+
+.btn{
+    @include partial.btn
+}
+.btn2{
+    @include partial.btn2
+}
+
+/*Navigation*/
+
+header {
+    display: flex;
+    justify-content: space-between; /* Placerer elementerne i hver ende af header'en */
+    align-items: center; /* Centrerer elementerne lodret */
+}
+
+nav ul {
+    list-style: none; /* Fjern punktopstillingen fra navigationen */
+    padding: 0; /* Fjern polstring */
+}
+
+nav li {
+    display: inline; /* Vis navigationselementerne ved siden af hinanden */
+    margin-left: 20px; /* Tilføj lidt afstand mellem hvert element */
+}
+
+.nav li:first-child {
+    margin-left: 0; /* Fjern afstanden til venstre for det første element */
+}
+
+nav a {
+    color: partial.$contrast-color; /* Ændre farven på tekst til sort (eller en anden farve efter behov) */
+    text-decoration: none; /* Fjern understregning fra linket */
+    font-family: Hind Siliguri;
+    padding: 20px;
+    font-size: partial.$font-size;
+}
+
+nav a:hover {
+    color: partial.$secondary; /* Ændre farven på tekst ved hover */
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+
+
+/*Body*/
+body{
+    background-color: partial.$primary;
+}
+
+/*Sektion Forside + Billede*/
+
+.forsideogbillede{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+}
+.forside{
+    padding-right: 5px;
+    padding-left: 5%;
+
+    p{
+        padding-right: 25em;
+        padding-bottom: 3%;
+        padding-top: 2%;
+        hyphens: auto;}
+    img{
+        max-width: 100%; /* Gør billedet responsivt */
+        height: auto; /* Tillader billedets højde at skaleres proportionalt */
+    }
+
+}
+
+
+
+/*Sektion Velkommen*/
+.sektion_velkommen{
+    background-color: partial.$accent-color;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1%;
+    
+
+    p{
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 2%;
+    }
+}
+.sektion_emner {
+    background-color: partial.$primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+
+    .emne {
+        max-width: 100%; /* Angiv en maksimal bredde på 90% af containeren */
+        margin: 0 auto; /* Centrer elementet vandret */
+        padding: 0;
+    }
+
+    p{
+        hyphens: auto;
+        text-align: center;
+        width: auto;
+    }
+   
+
+    
+}
+
+
+
+/*Sektion om os*/
+.sektion_omos{
+    display: flex;
+    flex-direction: row;
+    background-color: partial.$accent-color;
+
+    h2{
+        padding: 40px;
+        padding-bottom: 1%;
+    }
+    p{
+        padding: 40px;
+        padding-right: 12%;
+       
+    }
+    .btn {
+        margin: 40px; 
+    }
+    
+}
+
+
+/*Sektion Nyhedsbrev*/
+.sektion_nyhedsbrev{
+    @include partial.sektion_nyhedsbrev;
+
+    form {
+        label {
+            font-size:partial.$font-size;
+
+        input[type="text"],
+        input[type="email"] {
+            font-size:partial.$font-size;
+            font-family: Hind Siliguri;
+        }
+            
+        }
+        // Juster submit-knappens placering
+        .btn2 {
+            display: inline-block;
+            margin-top: 10px; 
+        }
+    }
+}
+
+/*Træning og ernæring*/
+
+.underside{
+    @include partial.underside;
+}
+
+
+
+.container{
+    margin: 20px;
+    padding-bottom: 5%;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-01{
+    background-color: partial.$accent-color;
+    color: partial.$tertiary;
+    position: relative;
+    flex: 1;
+    max-width: 526px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba (0,0,0,0.2);
+    text-align: left;
+    padding: 10px;
+
+    img {
+        width: 100%; 
+        /* height: 100%; Fjernet denne linje */
+        object-fit: cover;
+        justify-content: center;
+    }
+
+    p {
+        width: 100%;  /* Tilføjet denne linje */
+        box-sizing: border-box; /* Tilføjet denne linje for at inkludere padding og border i bredden */
+    }
+
+}
+
+
+
+/*Artikel i undersider*/
+
+.artikel {
+    @include partial.artikel}
+    
+
+
+/*Footer*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.footer-sektion{
+    h2{
+        color: partial.$contrast-color;
+    }
+    
+}
+
+
+/**********************Responsive Indstillinger************************/
+
+@media screen and (max-width: 1432px) {
+    //Forside
+    .forside{
+      
+        h1{
+            font-size: 92px;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+    
+        p{
+            padding-right: 5em;
+            padding-bottom: 8%;
+            padding-top: 5%;
+        }
+        .btn{
+            margin-bottom: 19%;
+        }
+    }
+    //Emner
+    .sektion_emner{
+        .emne {
+            max-width: 70%; /* Fuld bredde på mindre skærme */
+        }
+    
+        p {
+            width: 90%; /* Just an example value, adjust as needed */
+        }
+
+    
+    }
+}
+
+@media screen and (max-width: 1332px) {
+//Emner
+.sektion_emner{
+    
+    .emne{
+        width: 60%;
+    }
+    img{
+        width: 70%;
+        height: auto;
+    }
+}
+//Om os
+.sektion_omos{
+
+    padding: 50px;
+
+    .btn2{
+        padding-bottom: 3%;
+    }
+}
+}
+
+@media screen and (max-width: 1063px) {
+
+    //Forside
+    .forside{
+
+        h1{
+            font-size: 68px;
+        }
+
+        h2{
+            font-size: 22px;
+        }
+    
+        .btn{
+            margin-bottom: 19%;
+        }
+    }
+}
+
+@media screen and (max-width: 926px) {
+    //Forside
+    .forside{
+
+        h1{
+            font-size: 62px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+        .btn{
+            margin-bottom: 19%;
+        }
+    }
+    //Om os
+    .sektion_omos{
+
+        flex-direction: column;
+        img{
+            height: auto;
+        }
+        
+    }
+
+
+}
+
+
+/* Navigation */
+@media screen and (max-width: 870px) {
+    .nav-list {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu .bar {
+        width: 40px;
+        height: 8px;
+        background-color: partial.$tertiary;
+        margin: 5px 0 5px 0px;
+        transition: 0.4s;
+    }
+
+    /* Ændringer til hamburger-menu ved klik */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Vis navigationselementer, når hamburger-menuen er aktiv */
+    .nav-list.active {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 870px) {
+
+    //Forside
+    .forsideogbillede {
+        flex-direction: column; /* Omvender rækkefølgen af flex-elementerne på mindre skærme */
+
+        img {
+            max-width: 90%; /* Reducér bredden af billedet på mindre skærme */
+            padding-left: 40%;
+        }
+    }
+
+    
+
+    .forside {
+        text-align: left; /* Justér teksten til venstre på mindre skærme */
+        
+    
+        p{
+            padding: 0;
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
+        
+    }
+    //Emner
+   .sektion_emner{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+    .emne{
+        max-width: 80%;
+    }
+
+    img{
+        justify-content: center;
+        padding: 5px;
+    }
+    p{
+        width: auto;
+        padding-bottom: 20px;
+    }
+   }
+   .sektion_omos .btn{
+        margin:0;
+    }
+   }
+
+
+   @media (max-width:800px){
+    .card-01{
+        flex: 100%;
+        max-width: 600px;
+    }
+}
+
+
+
+
+  // Medieforespørgsel for mindre skærme
+  @media (max-width: 768px) {
+
+   .underside_overskrift p {
+    padding-right: 0;
+}
+
+// Medieforespørgsel for endnu mindre skærme
+@media (max-width: 480px) {
+    p {
+       padding: 0;
+       hyphens: none;
+    }
+}
+  }
